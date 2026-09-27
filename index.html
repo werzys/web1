@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №1</title>
+    <style>
+        body {
+            background: #eef6ff;
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            line-height: 1.5;
+        }
+        h1, h2 { color: #244b70; }
+        li { margin: 8px 0; }
+        form {
+            background: white;
+            padding: 20px;
+            border: 1px solid #b8cce0;
+            max-width: 650px;
+        }
+        label { display: block; margin-top: 10px; }
+        input, select, textarea { margin-top: 5px; }
+        textarea { width: 100%; max-width: 600px; }
+        .map-image { width: 420px; height: 180px; }
+    </style>
+</head>
+<body>
+    <h1>Лабораторная работа №1</h1>
+    <h2>Список гиперссылок</h2>
+
+    <ul>
+        <li>1. <a href="http://kubsu.ru/">Абсолютная ссылка на kubsu.ru по HTTP</a></li>
+        <li>2. <a href="https://kubsu.ru/">Абсолютная ссылка на kubsu.ru по HTTPS</a></li>
+        <li>3. <a href="image.jpg">Ссылка-изображение</a></li>
+        <li>4. <a href="/about">Сокращённая ссылка на внутреннюю страницу</a></li>
+        <li>5. <a href="/">Сокращённая ссылка на главную страницу</a></li>
+        <li>6. <a href="#form">Ссылка на фрагмент текущей страницы</a></li>
+        <li>7. <a href="page.html?param1=one&param2=two&param3=three">Ссылка с тремя параметрами</a></li>
+        <li>8. <a href="page.html?id=123">Ссылка с параметром id</a></li>
+        <li>9. <a href="page.html">Относительная ссылка на страницу текущего каталога</a></li>
+        <li>10. <a href="about/about.html">Относительная ссылка на страницу в каталоге about</a></li>
+        <li>11. <a href="level1/page.html">Относительная ссылка на страницу уровнем выше текущего</a></li>
+        <li>12. <a href="level1/level2/page.html">Относительная ссылка на страницу двумя уровнями ниже</a></li>
+        <li>13. В этом абзаце есть <a href="page.html">контекстная ссылка в тексте</a>, расположенная внутри предложения.</li>
+        <li>14. <a href="https://kubsu.ru/#content">Ссылка на фрагмент страницы стороннего сайта</a></li>
+        <li>
+            15. Ссылки из областей изображения:
+            <br>
+            <img src="image.jpg" alt="Изображение с областями" usemap="#workmap" class="map-image">
+            <map name="workmap">
+                <area shape="rect" coords="0,0,210,180" href="page.html" alt="Прямоугольная область">
+                <area shape="circle" coords="315,90,65" href="about/about.html" alt="Круглая область">
+            </map>
+        </li>
+        <li>16. <a href="">Ссылка с пустым href</a></li>
+        <li>17. <a>Ссылка без href</a></li>
+        <li>18. <a href="https://kubsu.ru/" rel="nofollow">Ссылка, запрещённая для перехода поисковиками</a></li>
+        <li>19. <a href="https://kubsu.ru/" rel="noindex">Ссылка, запрещённая для индексации поисковиками</a></li>
+        <li>
+            20. Нумерованный список ссылок с подписями title:
+            <ol>
+                <li><a href="page.html" title="Открыть дополнительную страницу">Дополнительная страница</a></li>
+                <li><a href="about/about.html" title="Открыть страницу about">Страница about</a></li>
+                <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ">Сайт КубГУ</a></li>
+            </ol>
+        </li>
+        <li>21. <a href="ftp://user:password@example.com/file.txt">FTP-ссылка с авторизацией</a></li>
+    </ul>
+
+    <h2 id="form">Форма</h2>
+    <form action="#" method="post">
+        <label>
+            ФИО:
+            <input type="text" name="fullname" required>
+        </label>
+
+        <label>
+            Телефон:
+            <input type="tel" name="phone">
+        </label>
+
+        <label>
+            E-mail:
+            <input type="email" name="email">
+        </label>
+
+        <label>
+            Дата рождения:
+            <input type="date" name="birthdate">
+        </label>
+
+        <label>Пол:</label>
+        <label><input type="radio" name="gender" value="male"> Мужской</label>
+        <label><input type="radio" name="gender" value="female"> Женский</label>
+
+        <label>
+            Любимый язык программирования:
+            <select name="languages[]" multiple size="6">
+                <option>Pascal</option>
+                <option>C</option>
+                <option>C++</option>
+                <option>JavaScript</option>
+                <option>PHP</option>
+                <option>Python</option>
+                <option>Java</option>
+                <option>Haskel</option>
+                <option>Clojure</option>
+                <option>Prolog</option>
+                <option>Scala</option>
+            </select>
+        </label>
+
+        <label>
+            Биография:
+            <br>
+            <textarea name="biography" rows="6" cols="60"></textarea>
+        </label>
+
+        <label>
+            <input type="checkbox" name="contract" required>
+            С контрактом ознакомлен(а)
+        </label>
+
+        <br>
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>
