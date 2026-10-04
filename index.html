@@ -26,104 +26,119 @@
     </style>
 </head>
 <body>
-    <h1>Лабораторная работа №1</h1>
-    <h2>Список гиперссылок</h2>
 
-    <ul>
-        <li>1. <a href="http://kubsu.ru/">Абсолютная ссылка на kubsu.ru по HTTP</a></li>
-        <li>2. <a href="https://kubsu.ru/">Абсолютная ссылка на kubsu.ru по HTTPS</a></li>
-        <li>3. <a href="image.jpg">Ссылка-изображение</a></li>
-        <li>4. <a href="/about">Сокращённая ссылка на внутреннюю страницу</a></li>
-        <li>5. <a href="/">Сокращённая ссылка на главную страницу</a></li>
-        <li>6. <a href="#form">Ссылка на фрагмент текущей страницы</a></li>
-        <li>7. <a href="page.html?param1=one&param2=two&param3=three">Ссылка с тремя параметрами</a></li>
-        <li>8. <a href="page.html?id=123">Ссылка с параметром id</a></li>
-        <li>9. <a href="page.html">Относительная ссылка на страницу текущего каталога</a></li>
-        <li>10. <a href="about/about.html">Относительная ссылка на страницу в каталоге about</a></li>
-        <li>11. <a href="level1/page.html">Относительная ссылка на страницу уровнем выше текущего</a></li>
-        <li>12. <a href="level1/level2/page.html">Относительная ссылка на страницу двумя уровнями ниже</a></li>
-        <li>13. В этом абзаце есть <a href="page.html">контекстная ссылка в тексте</a>, расположенная внутри предложения.</li>
-        <li>14. <a href="https://kubsu.ru/#content">Ссылка на фрагмент страницы стороннего сайта</a></li>
-        <li>
-            15. Ссылки из областей изображения:
-            <br>
-            <img src="image.jpg" alt="Изображение с областями" usemap="#workmap" class="map-image">
-            <map name="workmap">
-                <area shape="rect" coords="0,0,210,180" href="page.html" alt="Прямоугольная область">
-                <area shape="circle" coords="315,90,65" href="about/about.html" alt="Круглая область">
-            </map>
-        </li>
-        <li>16. <a href="">Ссылка с пустым href</a></li>
-        <li>17. <a>Ссылка без href</a></li>
-        <li>18. <a href="https://kubsu.ru/" rel="nofollow">Ссылка, запрещённая для перехода поисковиками</a></li>
-        <li>19. <a href="https://kubsu.ru/" rel="noindex">Ссылка, запрещённая для индексации поисковиками</a></li>
-        <li>
-            20. Нумерованный список ссылок с подписями title:
-            <ol>
-                <li><a href="page.html" title="Открыть дополнительную страницу">Дополнительная страница</a></li>
-                <li><a href="about/about.html" title="Открыть страницу about">Страница about</a></li>
-                <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ">Сайт КубГУ</a></li>
-            </ol>
-        </li>
-        <li>21. <a href="ftp://user:password@example.com/file.txt">FTP-ссылка с авторизацией</a></li>
-    </ul>
+    <header>
+        <h1>Лабораторная работа №1</h1>
+    </header>
 
-    <h2 id="form">Форма</h2>
-    <form action="#" method="post">
-        <label>
-            ФИО:
-            <input type="text" name="fullname" required>
-        </label>
+    <main>
+        <h2>Список гиперссылок</h2>
 
-        <label>
-            Телефон:
-            <input type="tel" name="phone">
-        </label>
+        <ul>
+            <li>1. <a href="http://kubsu.ru/">Абсолютная ссылка на kubsu.ru по HTTP</a></li>
+            <li>2. <a href="https://kubsu.ru/">Абсолютная ссылка на kubsu.ru по HTTPS</a></li>
+            <li>3. <a href="image.jpg">Ссылка-изображение</a></li>
+            <li>4. <a href="/about">Сокращённая ссылка на внутреннюю страницу</a></li>
+            <li>5. <a href="/">Сокращённая ссылка на главную страницу</a></li>
+            <li>6. <a href="#form">Ссылка на фрагмент текущей страницы</a></li>
+            <li>7. <a href="page.html?param1=one&amp;param2=two&amp;param3=three">Ссылка с тремя параметрами</a></li>
+            <li>8. <a href="page.html?id=123">Ссылка с параметром id</a></li>
+            <li>9. <a href="page.html">Относительная ссылка на страницу текущего каталога</a></li>
+            <li>10. <a href="about/about.html">Относительная ссылка на страницу в каталоге about</a></li>
+            <li>11. <a href="../page.html">Относительная ссылка на страницу уровнем выше текущего</a></li>
+            <li>12. <a href="level1/level2/page.html">Относительная ссылка на страницу двумя уровнями ниже</a></li>
+            <li>13. В этом абзаце есть <a href="page.html">контекстная ссылка в тексте</a>, расположенная внутри предложения.</li>
+            <li>14. <a href="https://kubsu.ru/#content">Ссылка на фрагмент страницы стороннего сайта</a></li>
+            <li>
+                15. Ссылки из областей изображения:
+                <br>
+                <img src="image.jpg" alt="Изображение с областями" usemap="#workmap" class="map-image">
+                <map name="workmap">
+                    <area shape="rect" coords="0,0,210,180" href="page.html" alt="Прямоугольная область">
+                    <area shape="circle" coords="315,90,65" href="about/about.html" alt="Круглая область">
+                </map>
+            </li>
+            <li>16. <a href="">Ссылка с пустым href</a></li>
+            <li>17. <a>Ссылка без href</a></li>
+            <li>18. <a href="https://kubsu.ru/" rel="nofollow">Ссылка, запрещённая для перехода поисковикам</a></li>
+            <li>19. <a href="https://kubsu.ru/" rel="nofollow">Ссылка, запрещённая для индексации поисковиками</a></li>
+            <li>
+                20. Нумерованный список ссылок с подписями title:
+                <ol>
+                    <li><a href="page.html" title="Открыть дополнительную страницу">Дополнительная страница</a></li>
+                    <li><a href="about/about.html" title="Открыть страницу about">Страница about</a></li>
+                    <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ">Сайт КубГУ</a></li>
+                </ol>
+            </li>
+            <li>21. <a href="ftp://user:password@example.com/file.txt">FTP-ссылка с авторизацией</a></li>
+        </ul>
 
-        <label>
-            E-mail:
-            <input type="email" name="email">
-        </label>
+        <h2 id="form">Форма</h2>
+        <form action="http://httpbin.org/post" method="POST" class="form">
+            <div class="form__row">
+                <label for="fio" class="form__label">1. ФИО:</label>
+                <input type="text" id="fio" name="fio" class="form__input" placeholder="Иванов Иван Иванович" oninput="this.value = this.value.replace(/[\d]/g, '')" required>
+            </div>
 
-        <label>
-            Дата рождения:
-            <input type="date" name="birthdate">
-        </label>
+            <div class="form__row">
+                <label for="phone" class="form__label">2. Телефон:</label>
+                <input type="tel" id="phone" name="phone" class="form__input" placeholder="+7 (900) 000-00-00" oninput="this.value = this.value.replace(/[^\d\+\(\)\s\-]/g, '')" required>
+            </div>
 
-        <label>Пол:</label>
-        <label><input type="radio" name="gender" value="male"> Мужской</label>
-        <label><input type="radio" name="gender" value="female"> Женский</label>
+            <div class="form__row">
+                <label for="email" class="form__label">3. E-mail:</label>
+                <input type="email" id="email" name="email" class="form__input" placeholder="email@domain.com" required>
+            </div>
 
-        <label>
-            Любимый язык программирования:
-            <select name="languages[]" multiple size="6">
-                <option>Pascal</option>
-                <option>C</option>
-                <option>C++</option>
-                <option>JavaScript</option>
-                <option>PHP</option>
-                <option>Python</option>
-                <option>Java</option>
-                <option>Haskel</option>
-                <option>Clojure</option>
-                <option>Prolog</option>
-                <option>Scala</option>
-            </select>
-        </label>
+            <div class="form__row">
+                <label for="birthday" class="form__label">4. Дата рождения:</label>
+                <input type="date" id="birthday" name="birthday" class="form__input" onfocus="this.max = new Date().toISOString().split('T')[0]" required>
+            </div>
 
-        <label>
-            Биография:
-            <br>
-            <textarea name="biography" rows="6" cols="60"></textarea>
-        </label>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">5. Пол:</legend>
+                <label class="form__radio">
+                    <input type="radio" name="gender" value="male" checked> Мужской
+                </label>
+                <label class="form__radio">
+                    <input type="radio" name="gender" value="female"> Женский
+                </label>
+            </fieldset>
 
-        <label>
-            <input type="checkbox" name="contract" required>
-            С контрактом ознакомлен(а)
-        </label>
+            <div class="form__row">
+                <label for="languages" class="form__label">6. Любимый язык программирования:</label>
+                <select id="languages" name="languages[]" multiple class="form__select" size="5">
+                    <option value="Pascal">Pascal</option>
+                    <option value="C">C</option>
+                    <option value="C++" selected>C++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Haskell">Haskell</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="Prolog">Prolog</option>
+                    <option value="Scala">Scala</option>
+                </select>
+            </div>
 
-        <br>
-        <button type="submit">Сохранить</button>
-    </form>
+            <div class="form__row">
+                <label for="bio" class="form__label">7. Биография:</label>
+                <textarea id="bio" name="bio" rows="5" class="form__textarea" placeholder="Коротко о себе..."></textarea>
+            </div>
+
+            <div class="form__row">
+                <label class="form__checkbox">
+                    <input type="checkbox" name="contract" value="yes" required>
+                    С контрактом ознакомлен(а)
+                </label>
+            </div>
+
+            <div class="form__row">
+                <button type="submit" class="form__button">Сохранить</button>
+            </div>
+        </form>
+    </main>
+
 </body>
 </html>
